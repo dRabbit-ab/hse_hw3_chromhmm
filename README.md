@@ -33,6 +33,19 @@
 
 ### Epigenetic states
 
+| Состояния | Названия | Метки | Изображение |
+| ----------- | ----------------- | ----------------- | ----------------- |
+| 1 | Active_Promoter | - |  |
+| 2 | Weak_Promoter | - |  |
+| 3 | Inactive/poised_Promoter | - |  |
+| 4 | Strong_enhancer | - |  |
+| 5 | Strong_enhancer | - |  |
+| 6 | Weak/poised_enhancer | - |  |
+| 7 | Weak/poised_enhancer | - |  |
+| 8 | Insulator | - |  |
+| 9 | Transcriptional_transition | - |  |
+| 10 | Transcriptional_elongation | - |  |
+
 ## Bonus Part
 
 См. Code examples
