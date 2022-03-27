@@ -23,6 +23,14 @@
 
 ### ChromHMM
 
+|       Overlap      | emissions | transitions |
+| ----------- | ----------------- | ----------------- |
+| A549 | H2AFZ | wgEncodeBroadHistoneA549H2azDex100nmAlnRep1.bam |
+
+|       RefSeqTES_neighborhood      | RefSeqTSS_neighborhood |
+| ----------- | ----------------- |
+| A549 | H2AFZ |
+
 ### Epigenetic states
 
 ## Bonus Part
