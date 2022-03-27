@@ -19,7 +19,7 @@
 | A549 | H4K20me1  | wgEncodeBroadHistoneA549H4k20me1Etoh02AlnRep1.bam | H4k20me1.bam |
 | A549 | Control | wgEncodeBroadHistoneA549ControlDex100nmAlnRep1.bam | A549Control.bam |
 
-## Part 1
+## Main part
 
 ## Bonus Part
 
