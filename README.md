@@ -35,16 +35,16 @@
 
 | Состояния | Названия | Метки | Изображение |
 | ----------- | ----------------- | ----------------- | ----------------- |
-| 1 | Active Promoter | - |  |
+| 1 | Active Promoter | H3k27me3 |  |
 | 2 | Weak Promoter | - |  |
-| 3 | Inactive/poised Promoter | - |  |
-| 4 | Strong enhancer | - |  |
-| 5 | Strong enhancer | - |  |
-| 6 | Weak/poised enhancer | - |  |
-| 7 | Weak/poised enhancer | - |  |
-| 8 | Insulator | - |  |
-| 9 | Transcriptional transition | - |  |
-| 10 | Transcriptional elongation | - |  |
+| 3 | Inactive/poised Promoter | H3k09me3 |  |
+| 4 | Strong enhancer | H3k36me3 |  |
+| 5 | Strong enhancer | H3k36me3, H4k20me1, H3k79me2 |  |
+| 6 | Weak/poised enhancer | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 |  |
+| 7 | Weak/poised enhancer | H3k04me1, H2az |  |
+| 8 | Insulator | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
+| 9 | Transcriptional transition | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
+| 10 | Transcriptional elongation | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 |  |
 
 ## Bonus Part
 
