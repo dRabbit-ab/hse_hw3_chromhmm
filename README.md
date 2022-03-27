@@ -25,11 +25,11 @@
 
 |       Overlap      | emissions | transitions |
 | ----------- | ----------------- | ----------------- |
-| https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_overlap.png | https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/emissions_10.png | https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/transitions_10.png |
+| ![Image1](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_overlap.png) | ![Image2](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/emissions_10.png) | ![Image3](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/transitions_10.png) |
 
 |       RefSeqTES_neighborhood      | RefSeqTSS_neighborhood |
 | ----------- | ----------------- |
-| https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_RefSeqTES_neighborhood.png | https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_RefSeqTSS_neighborhood.png |
+| ![Image4](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_RefSeqTES_neighborhood.png) | ![Image5](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_RefSeqTSS_neighborhood.png) |
 
 ### Epigenetic states
 
