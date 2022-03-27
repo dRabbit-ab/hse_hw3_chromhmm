@@ -67,10 +67,10 @@ with open('cellmarkfiletable.txt', 'w') as f:
 ```
 import pandas as pd
 
-full_status_names = ['1_Heterochromatin_low_signal', '2_', '3_', '4_', 
-                     '5_', '6_', 
-                     '7_', '8_',
-                     '9_', '10_']
+full_status_names = ['1_Heterochromatin', '2_Repressed', '3_Heterochromatin', '4_Trabscribed', 
+                     '5_Trabscribed', '6_Trabscribed', 
+                     '7_Weak_enhancer', '8_Weak_Promoter',
+                     '9_Active_Promoter', '10_Trabscribed']
 
 data = pd.read_csv('/content/data_LearnModel_10/A549_10_dense.bed', sep='\t', skiprows=1, names=[1, 2, 3, 'status', 4, 5, 6, 7, 8])
 
