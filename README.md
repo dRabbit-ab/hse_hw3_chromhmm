@@ -33,18 +33,18 @@
 
 ### Epigenetic states
 
-| Состояния | Названия | Метки | Изображение |
-| ----------- | ----------------- | ----------------- | ----------------- |
-| 1 | Active Promoter | H3k27me3 |  |
-| 2 | Weak Promoter | - |  |
-| 3 | Inactive/poised Promoter | H3k09me3 |  |
-| 4 | Strong enhancer | H3k36me3 |  |
-| 5 | Strong enhancer | H3k36me3, H4k20me1, H3k79me2 |  |
-| 6 | Weak/poised enhancer | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 |  |
-| 7 | Weak/poised enhancer | H3k04me1, H2az |  |
-| 8 | Insulator | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
-| 9 | Transcriptional transition | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
-| 10 | Transcriptional elongation | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 |  |
+| Состояния | Названия | Метки | Изображение | Свойство |
+| ----------- | ----------------- | ----------------- | ----------------- | ----------------- |
+| 1 | Heterochromatin | H3k27me3 | - | Лежит вне генов, вне экзонов |
+| 2 | Repressed | - | - | Лежит вне генов, вне экзонов |
+| 3 | Heterochromatin | H3k09me3 | - | Лежит вне генов, вне экзонов |
+| 4 | Trabscribed | H3k36me3 | - | Лежит в генах и в экзонах |
+| 5 | Trabscribed | H3k36me3, H4k20me1, H3k79me2 | - | Лежит в генах и в экзонах |
+| 6 | Trabscribed | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 | - | Лежит в генах и в экзонах |
+| 7 | Weak enhancer | H3k04me1, H2az | - | Лежит вне генов, в экзонах |
+| 8 | Weak Promoter | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - | Зависит от CpG островков, лежит вне генов |
+| 9 | Active Promoter | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - | Зависит от CpG островков, лежит вне генов |
+| 10 | Trabscribed | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 | - | Лежит в генах и в экзонах |
 
 ## Bonus Part
 
@@ -67,10 +67,10 @@ with open('cellmarkfiletable.txt', 'w') as f:
 ```
 import pandas as pd
 
-full_status_names = ['1_Insulator', '2_Insulator', '3_Weak_transcribed', '4_Inactive/poised_Promoter', 
-                     '5_Transcriptional_transition', '6_Transcriptional_transition', 
-                     '7_Active_Promoter', '8_Heterochromatin_low_signal',
-                     '9_Weak/poised_enhancer', '10_Inactive/poised_Promoter']
+full_status_names = ['1_Heterochromatin_low_signal', '2_', '3_', '4_', 
+                     '5_', '6_', 
+                     '7_', '8_',
+                     '9_', '10_']
 
 data = pd.read_csv('/content/data_LearnModel_10/A549_10_dense.bed', sep='\t', skiprows=1, names=[1, 2, 3, 'status', 4, 5, 6, 7, 8])
 
