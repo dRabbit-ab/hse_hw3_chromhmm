@@ -23,7 +23,16 @@
 
 ## Bonus Part
 
-## Code example
+## Code examples
+```
+import os
+
+with open('cellmarkfiletable.txt', 'w') as f:
+  for file in os.listdir():
+    if file.split('.')[-1] == 'bed' and 'Control' not in file:
+      to_write = f'A549\t{file.split(".")[0]}\t{file}\tA549Control.bed\n'
+      f.write(to_write)
+```
 
 ```
 import pandas as pd
