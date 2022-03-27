@@ -33,18 +33,18 @@
 
 ### Epigenetic states
 
-| Состояния | Названия | Метки | Изображение |
-| ----------- | ----------------- | ----------------- | ----------------- |
-| 1 |  | H3k27me3 |  |
-| 2 |  | - |  |
-| 3 |  | H3k09me3 |  |
-| 4 |  | H3k36me3 |  |
-| 5 | | H3k36me3, H4k20me1, H3k79me2 |  |
-| 6 |  | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 |  |
-| 7 |  | H3k04me1, H2az |  |
-| 8 |  | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
-| 9 |  | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
-| 10 |  | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 |  |
+| Состояния | Названия | Метки | Изображение | Свойство |
+| ----------- | ----------------- | ----------------- | ----------------- | ----------------- |
+| 1 | Heterochromatin low signal | H3k27me3 | - | Лежит вне генов |
+| 2 | - | - | - | Лежит вне генов |
+| 3 | Weak transcribed | H3k09me3 | - |  |
+| 4 | Weak transcribed | H3k36me3 | - |  |
+| 5 | Weak transcribed | H3k36me3, H4k20me1, H3k79me2 | - |  |
+| 6 | Weak enhancer | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 | - |  |
+| 7 | Weak enhancer | H3k04me1, H2az | - |  |
+| 8 | Strong enhancer | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - |  |
+| 9 | Active Promoter | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - |  |
+| 10 | Active Promoter | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 | - |  |
 
 ## Bonus Part
 
@@ -67,10 +67,10 @@ with open('cellmarkfiletable.txt', 'w') as f:
 ```
 import pandas as pd
 
-full_status_names = ['1_Insulator', '2_Insulator', '3_Weak_transcribed', '4_Inactive/poised_Promoter', 
-                     '5_Transcriptional_transition', '6_Transcriptional_transition', 
-                     '7_Active_Promoter', '8_Heterochromatin_low_signal',
-                     '9_Weak/poised_enhancer', '10_Inactive/poised_Promoter']
+full_status_names = ['1_Heterochromatin_low_signal', '2_', '3_', '4_', 
+                     '5_', '6_', 
+                     '7_', '8_',
+                     '9_', '10_']
 
 data = pd.read_csv('/content/data_LearnModel_10/A549_10_dense.bed', sep='\t', skiprows=1, names=[1, 2, 3, 'status', 4, 5, 6, 7, 8])
 
