@@ -25,4 +25,18 @@
 
 ## Code example
 
+import pandas as pd
+
+full_status_names = ['1_Active_Promoter', '2_Weak_Promoter', '3_Inactive/poised_Promoter', '4_Strong_enhancer', '5_Strong_enhancer', '6_Weak/poised_enhancer',\
+                '7_Weak/poised_enhancer', '8_Insulator', '9_Transcriptional_transition', '10_Transcriptional_elongation']
+
+data = pd.read_csv('/content/data_LearnModel_10/A549_10_dense.bed', sep='\t', skiprows=1, names=[1, 2, 3, 'status', 4, 5, 6, 7, 8])
+
+status = pd.DataFrame(full_status_names, columns=['full_status'], index=[i for i in range(1, 11)])
+
+data = data.merge(status, left_on='status', right_index=True).sort_index().drop(['status'], axis=1).rename(columns={'full_status': 'status'})
+data = data[[1, 2, 3, 'status', 4, 5, 6, 7, 8]]
+
+data.to_csv('new_A549_10_dense.bed', sep='\t', header=False, index=False)
+
 ## Comand list
