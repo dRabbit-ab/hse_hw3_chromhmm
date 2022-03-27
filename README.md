@@ -59,9 +59,9 @@ data.to_csv('new_A549_10_dense.bed', sep='\t', header=False, index=False)
 ```
 ## Comand list
 
-  1) !wget - скачивание файлов
-  2) !bedtools bamtobed - перевод bam формат в bed
-  3) !cat - вывод файла
-  4) !java -mx5000M -jar ChromHMM.jar BinarizeBed - разбиение генома на условные интервалы
-  5) !java -mx5000M -jar ChromHMM.jar LearnModel - присвоение каждому геномному интервалу определенный эпигенетический тип
-  6) !zip - архивирование файлов
+  1) ! wget : скачивание файлов
+  2) ! bedtools bamtobed : перевод bam формат в bed
+  3) ! cat : вывод файла
+  4) ! java -mx5000M -jar ChromHMM.jar BinarizeBed : разбиение генома на условные интервалы
+  5) ! java -mx5000M -jar ChromHMM.jar LearnModel : присвоение каждому геномному интервалу определенный эпигенетический тип
+  6) ! zip : архивирование файлов
