@@ -23,7 +23,7 @@
 
 ### ChromHMM
 
-|       Overlap      | emissions | transitions |
+|       Overlap      | Emissions | Transitions |
 | ----------- | ----------------- | ----------------- |
 | ![Image1](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_overlap.png) | ![Image2](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/emissions_10.png) | ![Image3](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/transitions_10.png) |
 
