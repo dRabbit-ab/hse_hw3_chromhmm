@@ -21,6 +21,10 @@
 
 ## Main part
 
+### ChromHMM
+
+### Epigenetic states
+
 ## Bonus Part
 
 См. Code examples
