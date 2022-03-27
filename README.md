@@ -21,8 +21,71 @@
 
 ## Main part
 
+### ChromHMM
+
+|       Overlap      | Emissions | Transitions |
+| ----------- | ----------------- | ----------------- |
+| ![Image1](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_overlap.png) | ![Image2](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/emissions_10.png) | ![Image3](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/transitions_10.png) |
+
+|       RefSeqTES_neighborhood      | RefSeqTSS_neighborhood |
+| ----------- | ----------------- |
+| ![Image4](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_RefSeqTES_neighborhood.png) | ![Image5](https://github.com/dRabbit-ab/hse_hw3_chromhmm/blob/main/images/A549_10_RefSeqTSS_neighborhood.png) |
+
+### Epigenetic states
+
+| Состояния | Названия | Метки | Изображение |
+| ----------- | ----------------- | ----------------- | ----------------- |
+| 1 | Active Promoter | H3k27me3 |  |
+| 2 | Weak Promoter | - |  |
+| 3 | Inactive/poised Promoter | H3k09me3 |  |
+| 4 | Strong enhancer | H3k36me3 |  |
+| 5 | Strong enhancer | H3k36me3, H4k20me1, H3k79me2 |  |
+| 6 | Weak/poised enhancer | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 |  |
+| 7 | Weak/poised enhancer | H3k04me1, H2az |  |
+| 8 | Insulator | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
+| 9 | Transcriptional transition | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az |  |
+| 10 | Transcriptional elongation | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 |  |
+
 ## Bonus Part
 
-## Code example
+См. Code examples
 
+## Code examples
+
+Код для создания cellmarkfiletable.txt
+```
+import os
+
+with open('cellmarkfiletable.txt', 'w') as f:
+  for file in os.listdir():
+    if file.split('.')[-1] == 'bed' and 'Control' not in file:
+      to_write = f'A549\t{file.split(".")[0]}\t{file}\tA549Control.bed\n'
+      f.write(to_write)
+```
+
+Код для бонусной части
+```
+import pandas as pd
+
+full_status_names = ['1_Insulator', '2_Insulator', '3_Weak_transcribed', '4_Inactive/poised_Promoter', 
+                     '5_Transcriptional_transition', '6_Transcriptional_transition', 
+                     '7_Active_Promoter', '8_Heterochromatin_low_signal',
+                     '9_Weak/poised_enhancer', '10_Inactive/poised_Promoter']
+
+data = pd.read_csv('/content/data_LearnModel_10/A549_10_dense.bed', sep='\t', skiprows=1, names=[1, 2, 3, 'status', 4, 5, 6, 7, 8])
+
+status = pd.DataFrame(full_status_names, columns=['full_status'], index=[i for i in range(1, 11)])
+
+data = data.merge(status, left_on='status', right_index=True).sort_index().drop(['status'], axis=1).rename(columns={'full_status': 'status'})
+data = data[[1, 2, 3, 'status', 4, 5, 6, 7, 8]]
+
+data.to_csv('new_A549_10_dense.bed', sep='\t', header=False, index=False)
+```
 ## Comand list
+
+  1) **! wget** : скачивание файлов
+  2) **! bedtools bamtobed** : перевод bam формат в bed
+  3) **! cat** : вывод файла
+  4) **! java -mx5000M -jar ChromHMM.jar BinarizeBed** : разбиение генома на условные интервалы
+  5) **! java -mx5000M -jar ChromHMM.jar LearnModel** : присвоение каждому геномному интервалу определенный эпигенетический тип
+  6) **! zip** : архивирование файлов
