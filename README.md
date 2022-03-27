@@ -23,6 +23,8 @@
 
 ## Bonus Part
 
+См. Code examples
+
 ## Code examples
 
 Код для создания cellmarkfiletable.txt
