@@ -24,6 +24,8 @@
 ## Bonus Part
 
 ## Code examples
+
+Код для создания cellmarkfiletable.txt
 ```
 import os
 
@@ -34,6 +36,7 @@ with open('cellmarkfiletable.txt', 'w') as f:
       f.write(to_write)
 ```
 
+Код для бонусной части
 ```
 import pandas as pd
 
