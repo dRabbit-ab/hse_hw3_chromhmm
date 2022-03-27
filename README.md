@@ -35,16 +35,16 @@
 
 | Состояния | Названия | Метки | Изображение | Свойство |
 | ----------- | ----------------- | ----------------- | ----------------- | ----------------- |
-| 1 | Heterochromatin low signal | H3k27me3 | - | Лежит вне генов |
-| 2 | - | - | - | Лежит вне генов |
-| 3 | Weak transcribed | H3k09me3 | - |  |
-| 4 | Weak transcribed | H3k36me3 | - |  |
-| 5 | Weak transcribed | H3k36me3, H4k20me1, H3k79me2 | - |  |
-| 6 | Weak enhancer | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 | - |  |
-| 7 | Weak enhancer | H3k04me1, H2az | - |  |
-| 8 | Strong enhancer | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - |  |
-| 9 | Active Promoter | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - |  |
-| 10 | Active Promoter | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 | - |  |
+| 1 | Heterochromatin | H3k27me3 | - | Лежит вне генов, вне экзонов |
+| 2 | Repressed | - | - | Лежит вне генов, вне экзонов |
+| 3 | Heterochromatin | H3k09me3 | - | Лежит вне генов, вне экзонов |
+| 4 | Trabscribed | H3k36me3 | - | Лежит в генах и в экзонах |
+| 5 | Trabscribed | H3k36me3, H4k20me1, H3k79me2 | - | Лежит в генах и в экзонах |
+| 6 | Trabscribed | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2 | - | Лежит в генах и в экзонах |
+| 7 | Weak enhancer | H3k04me1, H2az | - | Лежит вне генов, в экзонах |
+| 8 | Weak Promoter | H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - | Зависит от CpG островков, лежит вне генов |
+| 9 | Active Promoter | H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3, H2az | - | Зависит от CpG островков, лежит вне генов |
+| 10 | Trabscribed | H3k36me3, H4k20me1, H3k79me2, H3k04me1, H3k04me2, H3k09ac, H3k27ac, H3k04me3 | - | Лежит в генах и в экзонах |
 
 ## Bonus Part
 
